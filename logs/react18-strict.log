@@ -1,0 +1,11 @@
+
+ RUN  v4.1.10 <repo>
+
+
+ Test Files  1 passed (1)
+      Tests  21 passed (21)
+   Start at  16:33:13
+   Duration  682ms (transform 253ms, setup 21ms, import 307ms, tests 37ms, environment 166ms)
+
+
+EXIT_CODE=0

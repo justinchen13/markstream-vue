@@ -1,0 +1,7 @@
+$ pnpm typecheck
+
+> markstream-vue@2.0.19 typecheck <repo>
+> vue-tsc --noEmit
+
+
+EXIT_CODE=0

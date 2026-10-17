@@ -1,0 +1,96 @@
+{
+  "browser": "155.0.8059.82",
+  "label": "before",
+  "results": [
+    {
+      "name": "normal-hover-leave",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Link A tooltip",
+        "oldConnected": true,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "visible-scroll-unmount",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Row 0 tooltip",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "queued-scroll-unmount",
+      "passed": false,
+      "error": "Expected hidden tooltip: {\"visible\":true,\"opacity\":\"1\",\"text\":\"Row 0 tooltip\",\"oldConnected\":false,\"oldAria\":\"tooltip-1792225459529-hg0epepcmot\",\"pending\":0}",
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Row 0 tooltip",
+        "oldConnected": false,
+        "oldAria": "tooltip-1792225459529-hg0epepcmot",
+        "pending": 0
+      }
+    },
+    {
+      "name": "inflight-leave",
+      "passed": false,
+      "error": "Expected hidden tooltip: {\"visible\":true,\"opacity\":\"1\",\"text\":\"Link A tooltip\",\"oldConnected\":true,\"oldAria\":null,\"pending\":0}",
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Link A tooltip",
+        "oldConnected": true,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "inflight-unmount",
+      "passed": false,
+      "error": "Expected hidden tooltip: {\"visible\":true,\"opacity\":\"1\",\"text\":\"Row 0 tooltip\",\"oldConnected\":false,\"oldAria\":null,\"pending\":0}",
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Row 0 tooltip",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "a-to-b-stale-result",
+      "passed": false,
+      "error": "Ownership leak: {\"visible\":true,\"opacity\":\"1\",\"text\":\"Link B tooltip\",\"oldConnected\":true,\"oldAria\":\"tooltip-1792225461511-4ffdqx3wf7d\",\"pending\":0}",
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Link B tooltip",
+        "oldConnected": true,
+        "oldAria": "tooltip-1792225461511-4ffdqx3wf7d",
+        "pending": 0
+      }
+    },
+    {
+      "name": "a-unmount-keeps-b",
+      "passed": false,
+      "error": "A cleanup affected B: {\"visible\":true,\"opacity\":\"1\",\"text\":\"Link B tooltip\",\"oldConnected\":false,\"oldAria\":\"tooltip-1792225462261-y12si1fye4\",\"pending\":0}",
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Link B tooltip",
+        "oldConnected": false,
+        "oldAria": "tooltip-1792225462261-y12si1fye4",
+        "pending": 0
+      }
+    }
+  ],
+  "errors": []
+}

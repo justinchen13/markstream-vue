@@ -1,0 +1,181 @@
+$ pnpm --filter markstream-react build
+
+> markstream-react@2.0.19 build <repo>/packages/markstream-react
+> pnpm --dir ../markdown-parser build && pnpm --dir ../markstream-core build && vite build --mode npm && node ../../scripts/cleanup-style-entry.mjs && node ./scripts/finalize-tailwind-export.mjs && vite build -c vite.config.tailwind.ts --mode npm && node ./scripts/copy-tailwind-css.mjs && node ../../scripts/generate-px-css.mjs && pnpm run build:dts && node ./scripts/ensure-next-client-directive.mjs
+
+
+> stream-markdown-parser@1.2.20 build <repo>/packages/markdown-parser
+> tsdown
+
+ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+ℹ Using tsdown config: <repo>/packages/markdown-parser/tsdown.config.ts
+ℹ entry: src/index.ts
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 7 files
+ℹ [CJS] dist/index.cjs  866.03 kB │ gzip: 203.78 kB
+ℹ [CJS] 1 files, total: 866.03 kB
+ℹ [CJS] dist/index.d.cts.map  43.41 kB │ gzip: 12.32 kB
+ℹ [CJS] dist/index.d.cts      26.23 kB │ gzip:  6.81 kB
+ℹ [CJS] 2 files, total: 69.63 kB
+ℹ [ESM] dist/index.js         864.14 kB │ gzip: 203.57 kB
+ℹ [ESM] dist/index.js.map    1670.21 kB
+ℹ [ESM] dist/index.d.ts.map    18.81 kB │ gzip:   5.72 kB
+ℹ [ESM] dist/index.d.ts        27.27 kB │ gzip:   7.29 kB
+ℹ [ESM] 4 files, total: 2580.43 kB
+✔ Build complete in 829ms
+
+> markstream-core@2.0.19 build <repo>/packages/markstream-core
+> tsdown
+
+ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+ℹ Using tsdown config: <repo>/packages/markstream-core/tsdown.config.ts
+ℹ entry: src/index.ts
+ℹ target: es2015
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ Cleaning 7 files
+ℹ [CJS] dist/index.cjs  60.58 kB │ gzip: 13.95 kB
+ℹ [CJS] 1 files, total: 60.58 kB
+ℹ [ESM] dist/index.js         60.09 kB │ gzip: 13.92 kB
+ℹ [ESM] dist/index.js.map    108.89 kB │ gzip: 26.98 kB
+ℹ [ESM] dist/index.d.ts.map    6.60 kB │ gzip:  2.32 kB
+ℹ [ESM] dist/index.d.ts       10.04 kB │ gzip:  2.99 kB
+ℹ [ESM] 4 files, total: 185.61 kB
+ℹ [CJS] dist/index.d.cts.map   8.49 kB │ gzip: 2.84 kB
+ℹ [CJS] dist/index.d.cts      10.05 kB │ gzip: 2.99 kB
+ℹ [CJS] 2 files, total: 18.54 kB
+✔ Build complete in 545ms
+vite v7.3.6 building client environment for npm...
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/tailwind-entry.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/index.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/next.ts
+transforming...
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/server.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/customComponents.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/types/component-props.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/SubscriptNode/SubscriptNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/InsertNode/InsertNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/EmojiNode/EmojiNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CheckboxNode/CheckboxNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/HardBreakNode/HardBreakNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/HtmlBlockNode/HtmlBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/EmphasisNode/EmphasisNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ImageNode/ImageNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/AdmonitionNode/AdmonitionNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/DefinitionListNode/DefinitionListNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/StrongNode/StrongNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/D2BlockNode/d2.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/FootnoteAnchorNode/FootnoteAnchorNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ListNode/ListNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ThematicBreakNode/ThematicBreakNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/MathBlockNode/MathBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/PreCodeNode/PreCodeNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ListItemNode/ListItemNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/MermaidBlockNode/MermaidBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/InfographicBlockNode/InfographicBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/MathInlineNode/MathInlineNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/BlockquoteNode/BlockquoteNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/LinkNode/LinkNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/HighlightNode/HighlightNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/InlineCodeNode/InlineCodeNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/FootnoteReferenceNode/FootnoteReferenceNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/SuperscriptNode/SuperscriptNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/workers/mermaidWorkerClient.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/languageIcon.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/TextNode/TextNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/i18n/useSafeI18n.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CodeBlockNode/CodeBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/D2BlockNode/D2BlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/Tooltip/Tooltip.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/hooks/useSmoothMarkdownStream.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ReferenceNode/ReferenceNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/NodeRenderer.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/NodeRenderer/FallbackComponent.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/TableNode/TableNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/StrikethroughNode/StrikethroughNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/FootnoteNode/FootnoteNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/HeadingNode/HeadingNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/VmrContainerNode/VmrContainerNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/ParagraphNode/ParagraphNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/devEnv.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/renderers/renderNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/HtmlInlineNode/HtmlInlineNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CodeBlockNode/HtmlPreviewFrame.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/server-renderer/index.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/renderers/renderChildren.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/footnoteTarget.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/htmlToReact.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/workers/katexWorkerClient.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CodeBlockNode/PreCodeNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/context/viewportPriority.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/Math/MathBlockNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/safeRaf.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/MermaidBlockNode/mermaid.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/MermaidBlockNode/height.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/InfographicBlockNode/height.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/Math/MathInlineNode.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/context/streamState.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/languageIconExtended.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/tooltip/singletonTooltip.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/InfographicBlockNode/infographic.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CodeBlockNode/codeTypography.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/CodeBlockNode/streamDiffs.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/d2RenderSalt.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/context/smoothStreaming.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/customHtmlTag.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/renderers/codeBlockExtraProps.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/server-renderer/katex.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/utils/normalizeKaTeXRenderInput.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/server-renderer/html.tsx
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/NodeRenderer/preloadStreamDiffs.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/components/Math/katex.ts
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/workers/katexRenderer.worker.ts?worker
+[unplugin-starter] Development mode detected, transform for <repo>/packages/markstream-react/src/workers/mermaidParser.worker.ts?worker
+✓ 146 modules transformed.
+rendering chunks...
+
+[vite:dts] Start generate declaration files...
+Extracted class names written to <repo>/packages/markstream-react/dist/.tailwind-source.ts
+computing gzip size...
+dist/workers/katexRenderer.worker.js     1.19 kB
+dist/workers/mermaidParser.worker.js     1.44 kB
+dist/markstream-react.css               65.49 kB │ gzip: 11.48 kB
+dist/styles.js                           0.00 kB │ gzip:  0.02 kB
+dist/server.js                           1.52 kB │ gzip:  0.72 kB
+dist/index.js                            2.73 kB │ gzip:  1.21 kB
+dist/next.js                             3.98 kB │ gzip:  1.86 kB
+dist/languageIconExtended-DRR7G3nV.js   21.10 kB │ gzip:  8.23 kB
+dist/index-DueMgs9g.js                  29.78 kB │ gzip:  8.44 kB
+dist/codeBlockExtraProps-DKls4xQW.js    34.46 kB │ gzip: 12.28 kB
+dist/Tooltip-BwPlCx3V.js               166.89 kB │ gzip: 50.08 kB
+[vite:dts] Declaration files built in 2110ms.
+
+✓ built in 3.91s
+[cleanup-style-entry] Removed dist/styles.js
+[finalize-tailwind-export] Wrote dist/tailwind.js, dist/tailwind.cjs, and dist/tailwind.d.ts
+vite v7.3.6 building client environment for npm...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-tw/index.tailwind.css  52.12 kB │ gzip: 9.16 kB
+dist-tw/index.js             0.00 kB │ gzip: 0.02 kB
+✓ built in 118ms
+[generate-px-css] Wrote <repo>/packages/markstream-react/dist/index.px.css (222 rem values converted using 1rem=16px)
+
+> markstream-react@2.0.19 build:dts <repo>/packages/markstream-react
+> rollup -c ./scripts/rollup.dts.config.mjs && node ./scripts/clean-dts.cjs
+
+
+./dist/types/index.d.ts → dist/index.d.ts...
+created dist/index.d.ts in 114ms
+
+./dist/types/next.d.ts → dist/next.d.ts...
+created dist/next.d.ts in 42ms
+
+./dist/types/server.d.ts → dist/server.d.ts...
+created dist/server.d.ts in 33ms
+Rewrote <repo>/packages/markstream-react/dist/index.d.ts from <repo>/packages/markstream-react/dist/types/index.d.ts
+
+EXIT_CODE=0

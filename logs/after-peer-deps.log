@@ -1,0 +1,62 @@
+$ pnpm run check:peer-deps
+
+> markstream-vue@2.0.19 check:peer-deps <repo>
+> node ./scripts/check-peer-deps.cjs
+
+
+markstream-vue
+  OK   @antv/infographic@0.2.3 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   katex@0.16.25 (optional)
+  OK   mermaid@11.12.2 (optional)
+  OK   stream-diffs@0.0.2 (optional)
+  OK   vue@3.5.25
+  OK   vue-i18n@11.2.2 (optional)
+
+markstream-angular
+  OK   @angular/common@20.3.26
+  OK   @angular/core@20.3.26
+  OK   @antv/infographic@0.2.3 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   katex@0.16.37 (optional)
+  OK   mermaid@11.12.3 (optional)
+  OK   stream-diffs@0.0.2 (optional)
+
+markstream-octane
+  OK   @antv/infographic@0.2.19 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   katex@0.16.47 (optional)
+  OK   mermaid@11.16.0 (optional)
+  OK   octane@0.1.21
+  OK   stream-diffs@0.0.2 (optional)
+
+markstream-react
+  OK   @antv/infographic@0.2.3 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   katex@0.16.27 (optional)
+  OK   mermaid@11.12.2 (optional)
+  OK   react@18.3.1
+  OK   react-dom@18.3.1
+  OK   stream-diffs@0.0.2 (optional)
+
+markstream-svelte
+  OK   @antv/infographic@0.2.16 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   katex@0.16.44 (optional)
+  OK   mermaid@11.13.0 (optional)
+  OK   stream-diffs@0.0.2 (optional)
+  OK   svelte@5.56.8
+
+markstream-vue2
+  OK   @antv/infographic@0.2.3 (optional)
+  OK   @terrastruct/d2@0.1.33 (optional)
+  OK   @vue/composition-api@1.7.2 (optional)
+  OK   katex@0.16.27 (optional)
+  OK   mermaid@11.12.2 (optional)
+  OK   stream-diffs@0.0.2 (optional)
+  OK   vue@2.7.16
+  OK   vue-i18n@11.2.7 (optional)
+
+Peer dependency check passed.
+
+EXIT_CODE=0

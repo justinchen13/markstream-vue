@@ -1,0 +1,12 @@
+$ pnpm exec vitest run test/react-singleton-tooltip.test.tsx
+
+ RUN  v4.1.10 <repo>
+
+
+ Test Files  1 passed (1)
+      Tests  20 passed (20)
+   Start at  16:27:01
+   Duration  810ms (transform 405ms, setup 33ms, import 480ms, tests 45ms, environment 180ms)
+
+
+EXIT_CODE=0

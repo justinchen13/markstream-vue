@@ -1,0 +1,7 @@
+$ pnpm --filter markstream-react typecheck
+
+> markstream-react@2.0.19 typecheck <repo>/packages/markstream-react
+> tsc --noEmit && tsc -p ../../test/react-local-component-maps-types.tsconfig.json --noEmit
+
+
+EXIT_CODE=0

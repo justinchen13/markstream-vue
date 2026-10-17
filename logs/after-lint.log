@@ -1,0 +1,7 @@
+$ pnpm lint
+
+> markstream-vue@2.0.19 lint <repo>
+> eslint . --cache
+
+
+EXIT_CODE=0

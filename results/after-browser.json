@@ -1,0 +1,91 @@
+{
+  "browser": "155.0.8059.82",
+  "label": "after",
+  "results": [
+    {
+      "name": "normal-hover-leave",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Link A tooltip",
+        "oldConnected": true,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "visible-scroll-unmount",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Row 0 tooltip",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "queued-scroll-unmount",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "inflight-leave",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Link A tooltip",
+        "oldConnected": true,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "inflight-unmount",
+      "passed": true,
+      "state": {
+        "visible": false,
+        "opacity": "0",
+        "text": "Row 0 tooltip",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "a-to-b-stale-result",
+      "passed": true,
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Link B tooltip",
+        "oldConnected": true,
+        "oldAria": null,
+        "pending": 0
+      }
+    },
+    {
+      "name": "a-unmount-keeps-b",
+      "passed": true,
+      "state": {
+        "visible": true,
+        "opacity": "1",
+        "text": "Link B tooltip",
+        "oldConnected": false,
+        "oldAria": null,
+        "pending": 0
+      }
+    }
+  ],
+  "errors": []
+}

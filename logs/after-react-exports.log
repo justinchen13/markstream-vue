@@ -1,0 +1,8 @@
+$ pnpm --filter markstream-react check:exports
+
+> markstream-react@2.0.19 check:exports <repo>/packages/markstream-react
+> node ../../scripts/check-react-package-exports.mjs
+
+[react-package-exports] All 9 React package export subpaths, targets, CSS files, and runtime imports are valid.
+
+EXIT_CODE=0

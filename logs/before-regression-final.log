@@ -1,0 +1,293 @@
+$ pnpm exec vitest run test/react-singleton-tooltip.test.tsx --config ../tooltip-evidence/baseline.vite.config.mjs
+
+ RUN  v4.1.10 <repo>
+
+ ❯ test/react-singleton-tooltip.test.tsx (20 tests | 18 failed) 48ms
+     × does not revive an in-flight show after hide (immediate=true) 3ms
+     × does not revive an in-flight show after hide (immediate=false) 2ms
+     × rechecks ownership after the positioning await (hide) 1ms
+     × rechecks ownership after the positioning await (detach) 1ms
+     × rechecks ownership after the positioning await (switch) 1ms
+     × does not show an anchor removed during the hover delay 1ms
+     × does not show an anchor removed while positioning 1ms
+     × ignores an old position result when another anchor takes ownership 1ms
+     × stops the previous autoUpdate and removes its aria association on a switch 0ms
+     × ignores a pending autoUpdate result after hiding 1ms
+     × cleans up a detached anchor on an autoUpdate callback 1ms
+     × cleans up a queued link on unmount 3ms
+     × cleans up a positioning link on unmount 3ms
+     × cleans up a visible link on unmount 2ms
+     × keeps B queued when A unmounts 5ms
+     × keeps B visible when A unmounts 2ms
+     × cleans up when a link becomes loading 2ms
+     × cleans up when a link becomes disabled 1ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 18 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > does not revive an in-flight show after hide (immediate=true)
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:109:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > does not revive an in-flight show after hide (immediate=false)
+AssertionError: expected "vi.fn()" to not be called at all, but actually been called 1 times
+
+Received:
+
+  1st vi.fn() call:
+
+    Array [
+      <a />,
+      <div
+        class="markstream-react ms-tooltip"
+        data-dark="false"
+        data-placement="top"
+        data-visible="false"
+        id="tooltip-1792225623048-sa8mjksoboh"
+        role="tooltip"
+        style="position: fixed; left: 0px; top: 0px; transform: translate3d(20px, 30px, 0);"
+      >
+        A
+      </div>,
+      [Function anonymous],
+    ]
+
+
+Number of calls: 1
+
+ ❯ test/react-singleton-tooltip.test.tsx:110:37
+    108|     await vi.advanceTimersByTimeAsync(120)
+    109|     expectHidden(el)
+    110|     expect(floating.autoUpdate).not.toHaveBeenCalled()
+       |                                     ^
+    111|     expect(tooltip().style.transform).not.toContain('100px')
+    112|   })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > rechecks ownership after the positioning await (hide)
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > rechecks ownership after the positioning await (detach)
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:136:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > rechecks ownership after the positioning await (switch)
+AssertionError: expected "vi.fn()" to be called 1 times, but got 2 times
+ ❯ test/react-singleton-tooltip.test.tsx:132:35
+    130|     if (action === 'switch') {
+    131|       expect(tooltip().textContent).toBe('B')
+    132|       expect(floating.autoUpdate).toHaveBeenCalledTimes(1)
+       |                                   ^
+    133|       expect(floating.autoUpdate.mock.calls[0][0]).toBe(b)
+    134|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > does not show an anchor removed during the hover delay
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:146:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > does not show an anchor removed while positioning
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:159:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > ignores an old position result when another anchor takes ownership
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ test/react-singleton-tooltip.test.tsx:177:48
+    175|     expect(tooltip().dataset.placement).toBe('bottom')
+    176|     expect(tooltip().style.transform).toBe(transform)
+    177|     expect(a.hasAttribute('aria-describedby')).toBe(false)
+       |                                                ^
+    178|     expect(b.getAttribute('aria-describedby')).toBe(tooltip().id)
+    179|     expect(floating.autoUpdate).toHaveBeenCalledTimes(1)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > stops the previous autoUpdate and removes its aria association on a switch
+AssertionError: expected "vi.fn()" to be called 1 times, but got 0 times
+ ❯ test/react-singleton-tooltip.test.tsx:188:30
+    186|     await vi.advanceTimersByTimeAsync(0)
+    187|     showTooltipForAnchor(anchor(), 'B')
+    188|     expect(floating.cleanup).toHaveBeenCalledTimes(1)
+       |                              ^
+    189|     expect(a.hasAttribute('aria-describedby')).toBe(false)
+    190|     await vi.advanceTimersByTimeAsync(80)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > ignores a pending autoUpdate result after hiding
+AssertionError: expected 'translate3d(200px, 200px, 0)' to be 'translate3d(20px, 30px, 0)' // Object.is equality
+
+Expected: "translate3d(20px, 30px, 0)"
+Received: "translate3d(200px, 200px, 0)"
+
+ ❯ test/react-singleton-tooltip.test.tsx:207:39
+    205|     await vi.advanceTimersByTimeAsync(0)
+    206|     expectHidden(el)
+    207|     expect(tooltip().style.transform).toBe(transform)
+       |                                       ^
+    208|     expect(floating.cleanup).toHaveBeenCalledTimes(1)
+    209|   })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up a detached anchor on an autoUpdate callback
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:218:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up a queued link on unmount
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up a positioning link on unmount
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up a visible link on unmount
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:233:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > keeps B queued when A unmounts
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > keeps B visible when A unmounts
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ test/react-singleton-tooltip.test.tsx:251:48
+    249|     expect(tooltip().textContent).toBe('B')
+    250|     expect(b.getAttribute('aria-describedby')).toBe(tooltip().id)
+    251|     expect(a.hasAttribute('aria-describedby')).toBe(false)
+       |                                                ^
+    252|     expect(floating.cleanup).toHaveBeenCalledTimes(1)
+    253|   })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/18]⎯
+
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up when a link becomes loading
+ FAIL  test/react-singleton-tooltip.test.tsx > markstream-react singleton tooltip lifecycle > cleans up when a link becomes disabled
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ expectHidden test/react-singleton-tooltip.test.tsx:31:30
+     29|
+     30| function expectHidden(anchor: HTMLElement) {
+     31|   expect(isTooltipVisible()).toBe(false)
+       |                              ^
+     32|   expect(tooltip().dataset.visible).toBe('false')
+     33|   expect(anchor.hasAttribute('aria-describedby')).toBe(false)
+ ❯ test/react-singleton-tooltip.test.tsx:279:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/18]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  18 failed | 2 passed (20)
+   Start at  16:27:02
+   Duration  747ms (transform 284ms, setup 22ms, import 364ms, tests 48ms, environment 167ms)
+
+
+EXIT_CODE=1
